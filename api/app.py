@@ -1,24 +1,22 @@
-# app.py
-#!/bin/bash
+from flask import Flask, send_from_directory, jsonify
+import json
+import os
 
-echo "🔧 Starting Mystery Island Navigation Flask App..."
+app = Flask(__name__, static_folder='../webapp', static_url_path='')
 
-# Navigate to the API folder
-cd "$(dirname "$0")/../api"
+@app.route('/')
+def index():
+    return send_from_directory('../webapp', 'index.html')
 
-# Set up venv (optional but ideal)
-cd ..
-python3 -m venv venv
-source venv/bin/activate
+@app.route('/<path:path>')
+def static_files(path):
+    return send_from_directory('../webapp', path)
 
-# Install dependencies
-echo "📦 Installing dependencies..."
-pip install -r requirements.txt
+@app.route('/data/attractions.json')
+def get_attractions():
+    with open('data/attractions.json') as f:
+        data = json.load(f)
+    return jsonify(data)
 
-# Export Flask environment variables
-export FLASK_APP=api/app.py
-export FLASK_ENV=development  # Optional: Enables debugger
-
-# Run Flask app in background with logging
-echo "🚀 Launching on http://0.0.0.0:5000"
-nohup flask run --host=0.0.0.0 --port=5000 > output.log 2>&1 &
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
