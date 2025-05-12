@@ -1,0 +1,43 @@
+// attractions.json
+[
+  {
+    "name": "Skull Coaster",
+    "icon": "skull-icon.png",
+    "mapX": "50%",
+    "mapY": "50%",
+    "description": "A high-speed rollercoaster diving through the island’s cursed skull caverns.",
+    "image": "skull-coaster.jpg"
+  },
+  {
+    "name": "Volcano Surge",
+    "icon": "volcano-icon.png",
+    "mapX": "50%",
+    "mapY": "50%",
+    "description": "A fiery ride that bursts through the heart of Mystery Island’s dormant volcano.",
+    "image": "volcano-ride.jpg"
+  },
+  {
+    "name": "Tiki Boat Drift",
+    "icon": "boat-icon.png",
+    "mapX": "50%",
+    "mapY": "50%",
+    "description": "Relax and cruise through glowing lagoons and hidden temples.",
+    "image": "tiki-boat.jpg"
+  },
+  {
+    "name": "Jungle Maze",
+    "icon": "maze-icon.png",
+    "mapX": "50%",
+    "mapY": "50%",
+    "description": "Get lost in a twisting green labyrinth filled with riddles and secrets.",
+    "image": "jungle-maze.jpg"
+  },
+  {
+    "name": "Mystery Resort",
+    "icon": "resort-icon.png",
+    "mapX": "50%",
+    "mapY": "50%",
+    "description": "A serene escape for guests seeking relaxation, spa treatments, and fine island dining.",
+    "image": "mystery-resort.jpg"
+  }
+]

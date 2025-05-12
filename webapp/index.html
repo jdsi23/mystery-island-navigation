@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystery Island Navigation</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div id="map-container">
+    <img src="assets/maps/day-map.png" id="map" alt="Mystery Island Map" />
+    <div id="attraction-icons"></div>
+  </div>
+
+  <div id="info-popup" class="hidden">
+    <h2 id="popup-title"></h2>
+    <img id="popup-image" src="" alt="" />
+    <p id="popup-description"></p>
+    <button onclick="closePopup()">Close</button>
+    <button>Get Directions</button>
+  </div>
+
+  <script src="scripts/map.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
